@@ -121,18 +121,18 @@ body{
   align-items: center;
 }
 
-#comment-person-img{
+.comment-person-img{
   height: 36px;
   margin-right: 14px;
 }
 
-#comment-person-name{
+.comment-person-name{
   color: hsl(212, 24%, 26%);
   font-weight: 700;
   margin-right: 14px;
 }
 
-#comment-person-date{
+.comment-person-date{
   color: hsl(211, 10%, 45%);
 }
 

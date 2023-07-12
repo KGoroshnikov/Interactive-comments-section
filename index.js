@@ -82,16 +82,16 @@ function addComment(comData, mini, newThread, parentCommentId){
     content.innerHTML = comData.content;
   }
 
-  let createdAt = newComment.querySelector("#comment-person-date");
+  let createdAt = newComment.querySelector(".comment-person-date");
   createdAt.textContent = comData.createdAt;
 
   let score = newComment.querySelector(".upvote-score");
   score.textContent = comData.score;
 
-  let userImg = newComment.querySelector("#comment-person-img");
+  let userImg = newComment.querySelector(".comment-person-img");
   userImg.style.content = "url(" + comData.user.image.webp + ")";
 
-  let username = newComment.querySelector("#comment-person-name");
+  let username = newComment.querySelector(".comment-person-name");
   username.textContent = "";
   if (comData.user.username == currentUserName){
     newComment.querySelectorAll(".delete").forEach(element => {
@@ -103,9 +103,6 @@ function addComment(comData, mini, newThread, parentCommentId){
     newComment.querySelectorAll(".reply").forEach(element => {
       element.style.display = "none";
     });
-    //newComment.querySelector(".delete").style.display = "flex";
-    //newComment.querySelector(".edit").style.display = "flex";
-    //newComment.querySelector(".reply").style.display = "none";
     username.innerHTML = comData.user.username + " <span class='you-text'>you</span>";
   }
   else{
@@ -176,7 +173,7 @@ function createReply(){
   newReply.score = 0;
   newReply.user = mydata.currentUser;
   if (input_unique != undefined){
-    newReply.replyingTo = allComments[input_unique].querySelector("#comment-person-name").innerHTML;
+    newReply.replyingTo = allComments[input_unique].querySelector(".comment-person-name").innerHTML;
   }
 
   console.log(input_parent, input_unique, inputParent);
